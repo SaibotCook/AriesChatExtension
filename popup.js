@@ -17,7 +17,7 @@ searchBar.addEventListener('keyup', (e) => {
 
 const loadCharacters = async () => {
     try {
-        const res = await fetch('http://localhost/custom_emoji.json');
+        const res = await fetch('https://raw.githubusercontent.com/SaibotCook/AriesChatExtension/main/custom_emoji.json?token=GHSAT0AAAAAABRKXTUIV36DCEPOSTM2QGQKYQBMBWQ');
         hpCharacters = await res.json();
         displayCharacters(hpCharacters);
     } catch (err) {
