@@ -17,7 +17,7 @@ searchBar.addEventListener('keyup', (e) => {
 
 const loadCharacters = async () => {
     try {
-        const res = await fetch('https://raw.githubusercontent.com/SaibotCook/AriesChatExtension/main/custom_emoji.json?token=GHSAT0AAAAAABRKXTUJHASP2EWWCQXHHJAKYQBMFHA');
+        const res = await fetch('https://raw.githubusercontent.com/SaibotCook/AriesChatExtension/main/custom_emoji.json');
         hpCharacters = await res.json();
         displayCharacters(hpCharacters);
     } catch (err) {
@@ -26,29 +26,17 @@ const loadCharacters = async () => {
 };
 
 const displayCharacters = (characters) => {
-    if (character.emojiURL === "") {
+    
+    console.log("test");
 
-        const htmlString = characters
+    const htmlString = characters
         .map((character) => {
             return `
-                <text title="${character.aliases}">${character.emoji}</text>
+                <img class="emote" src="${character.emojiURL}" width="28px" heigth="28px" title="${character.aliases}" alt="${character.emoji}" />
         `;
         })
         .join('');
     charactersList.innerHTML = htmlString;
-        
-    } else {
-        const htmlString = characters
-        .map((character) => {
-            return `
-                <img src="${character.emojiURL}" title="${character.aliases}"></img>
-        `;
-        })
-        .join('');
-    charactersList.innerHTML = htmlString;
-    }
-
 };
-
 
 loadCharacters();
