@@ -22745,11 +22745,21 @@
   , "ios_version": "12.1"
   }
   , {
-    "emoji": "KEKW"
+    "emojiURL": "https://i.imgur.com/glOqRah.png"
   , "aliases": [
-      "kek"
+      "kek","kekw"
     ]
   , "tags": [
+      "custom"
+    ]
+  }
+  , {
+    "emojiURL": "https://i.imgur.com/8bmyqLD.png"
+  , "aliases": [
+      "pog","poggers"
+    ]
+  , "tags": [
+      "custom"
     ]
   }
 ]
