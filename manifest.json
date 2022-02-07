@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "BetterAriesChat",
+    "version": "1.0",
+
+    "description": "Does some stuff in the Aries Chat",
+
+    "content_scripts": [
+        {
+            "matches":["*://*.localhost/*"],
+            "js": ["BAC.js"]
+        }
+    ],
+
+    "permissions": [
+        "storage"
+    ],
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Emoji Selector",
+        "default_popup": "popup.html"
+    }
+}
